@@ -63,7 +63,7 @@ def intro():
         limite = pygame.time.get_ticks()/1000
         vid.draw(screen,(0,0))
         pygame.display.update()
-        if limite >14 and limite < 15:
+        if limite > 15:
             vid.close()
             menu()
         for event in pygame.event.get():
@@ -145,6 +145,7 @@ def tutorial():
         vid.draw(screen,(0,0))
         pygame.display.update()
         limite=(pygame.time.get_ticks()/1000)-tiempo
+        print(limite)
         if limite >29 and limite < 30:
             vid.close()
             menu()
@@ -233,6 +234,7 @@ def main():
                         candidata = ""
 
             segundos=TIEMPO_MAX-pygame.time.get_ticks()/1000 + arranque
+            print(segundos)
 
 
             #Limpiar pantalla anterior
@@ -258,6 +260,7 @@ def main():
                             texto=Texto(screen,str(puntos),(255,243,0),570,145)
                             pygame.display.update()
                             limite=(pygame.time.get_ticks()/1000)-tiempo
+                            print(limite)
                             if limite >9 and limite < 10:
                                 vid.close()
                                 pygame.quit()
@@ -281,6 +284,7 @@ def main():
                         texto=Texto(screen,str(puntos),(238,87,133),570,145)
                         pygame.display.update()
                         limite=(pygame.time.get_ticks()/1000)-tiempo
+                        print(limite)
                         if limite >9 and limite < 10:
                                 vid.close()
                                 pygame.quit()
